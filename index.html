@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levers for Change | Unlock EBITDA Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              lfcBlue: '#145A9E',
+              lfcRed: '#ED3237',
+              lfcOrange: '#F59E0B',
+              lfcSoft: '#F8FAFC',
+              lfcBorder: '#E2E8F0',
+            },
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+              display: ['Plus Jakarta Sans', 'sans-serif'],
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'shimmer': 'shimmer 2.5s linear infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #F8FAFC;
+        color: #0F172A;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      .mesh-bg {
+        background-color: #F8FAFC;
+        background-image: 
+          radial-gradient(at 0% 0%, hsla(210,100%,98%,1) 0, transparent 50%), 
+          radial-gradient(at 100% 0%, hsla(210,100%,94%,1) 0, transparent 50%);
+      }
+      .ebitda-gradient {
+        background: linear-gradient(90deg, #ED3237 0%, #F59E0B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .accent-gradient-bg {
+        background: linear-gradient(90deg, #ED3237 0%, #F59E0B 100%);
+      }
+      .spatial-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 10px 40px -10px rgba(237, 50, 55, 0.1);
+        transform: perspective(1000px) rotateX(10deg) rotateY(-15deg);
+        transition: all 0.5s ease;
+      }
+      .spatial-card:hover {
+        transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0) perspective(1000px) rotateX(10deg) rotateY(-15deg); }
+        50% { transform: translateY(-20px) perspective(1000px) rotateX(10deg) rotateY(-15deg); }
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .tracking-tighter-custom {
+        letter-spacing: -0.05em;
+      }
+      .glass-dock {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+<body class="mesh-bg">
+    <div id="root"></div>
+</body>
+</html>
