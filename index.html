@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,11 +34,18 @@
       }
     </script>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         background-color: #F8FAFC;
         color: #0F172A;
         overflow-x: hidden;
         -webkit-font-smoothing: antialiased;
+      }
+      /* Ensure sections don't hide under fixed navbar */
+      section[id] {
+        scroll-margin-top: 100px;
       }
       .mesh-bg {
         background-color: #F8FAFC;

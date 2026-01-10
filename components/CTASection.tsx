@@ -4,7 +4,7 @@ import { Sparkles, Calendar, ShieldCheck } from 'lucide-react';
 
 const CTASection: React.FC = () => {
   return (
-    <section className="py-24 lg:py-32">
+    <section id="cta-section" className="py-24 lg:py-32">
       <div className="container mx-auto px-6">
         <div className="relative bg-lfcBlue rounded-[3.5rem] p-12 lg:p-24 overflow-hidden reveal">
           {/* Animated background element */}

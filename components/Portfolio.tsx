@@ -282,7 +282,7 @@ const Portfolio: React.FC = () => {
                     href={activeData.linkedin} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto group/btn flex items-center justify-center space-x-4 bg-slate-900 text-white px-8 py-4 rounded-2xl font-black text-sm transition-all hover:scale-105 active:scale-95 shadow-xl shadow-slate-900/20"
+                    className="w-full sm:w-auto group/btn flex items-center justify-center space-x-4 bg-lfcBlue hover:bg-lfcBlue/90 text-white px-8 py-4 rounded-2xl font-black text-sm transition-all hover:scale-105 active:scale-95 shadow-xl shadow-lfcBlue/20"
                   >
                     <span>Read Full Case Study</span>
                     <ExternalLink size={16} className="group-hover/btn:translate-x-1 transition-transform" />

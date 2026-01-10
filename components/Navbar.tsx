@@ -11,6 +11,19 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <nav 
       className={`fixed left-0 right-0 z-[100] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] px-6 ${
@@ -25,7 +38,7 @@ const Navbar: React.FC = () => {
         }`}
       >
         {/* Logo Section */}
-        <div className="flex items-center space-x-3 group cursor-pointer">
+        <a href="#" onClick={scrollToTop} className="flex items-center space-x-3 group cursor-pointer">
           <div className={`transition-all duration-500 rounded flex items-center justify-center font-bold text-white bg-lfcBlue shadow-lg shadow-lfcBlue/20 ${
             scrolled ? 'w-7 h-7 text-base' : 'w-9 h-9 text-xl'
           }`}>
@@ -36,18 +49,20 @@ const Navbar: React.FC = () => {
           }`}>
             LEVERS <span className="text-lfcRed">FOR CHANGE</span>
           </span>
-        </div>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-10">
           <a 
             href="#levers" 
+            onClick={(e) => handleNavClick(e, 'levers')}
             className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 hover:text-lfcBlue transition-colors"
           >
             Methodology
           </a>
           <a 
             href="#portfolio" 
+            onClick={(e) => handleNavClick(e, 'portfolio')}
             className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 hover:text-lfcBlue transition-colors"
           >
             Portfolio
@@ -56,6 +71,7 @@ const Navbar: React.FC = () => {
 
         {/* CTA Button */}
         <button 
+          onClick={(e: any) => handleNavClick(e, 'cta-section')}
           className={`bg-lfcBlue hover:bg-lfcBlue/90 text-white font-black flex items-center space-x-2 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-lfcBlue/20 ${
             scrolled ? 'px-4 py-2 rounded-xl text-[10px]' : 'px-6 py-3 rounded-2xl text-xs'
           }`}
