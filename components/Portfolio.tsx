@@ -9,7 +9,7 @@ const industryData = [
     impact: "+42% EBITDA",
     challenge: "High resin waste & inconsistent cycle times.",
     solution: "Statistical OEE mapping & scrap reduction logic.",
-    linkedin: "https://www.linkedin.com/pulse/plastic-packaging-transformation-lfc"
+    linkedin: "https://www.linkedin.com/pulse/plastic-packaging-escaping-commodity-trap-levers-for-change-dfv3c"
   },
   {
     id: "02",
@@ -17,7 +17,7 @@ const industryData = [
     impact: "2.5x Yield",
     challenge: "Frequent loom micro-stoppages.",
     solution: "Scientific interval analysis & shift-synchronization.",
-    linkedin: "https://www.linkedin.com/pulse/textile-yield-optimization-lfc"
+    linkedin: "https://www.linkedin.com/pulse/textiles-case-study-right-first-time-revolution-levers-for-change-vrfjc"
   },
   {
     id: "03",
