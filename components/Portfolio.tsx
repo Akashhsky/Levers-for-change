@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowRight, ExternalLink, ShieldCheck, Factory, Gauge, TrendingUp, Layers } from 'lucide-react';
+import { ArrowRight, ExternalLink, ShieldCheck, Factory, Gauge, TrendingUp, Layers, ChevronRight } from 'lucide-react';
 
 const industryData = [
   {
@@ -121,6 +121,7 @@ const Portfolio: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeData = industryData[activeIndex];
   const scrollRef = useRef<HTMLDivElement>(null);
+  const mobileScrollRef = useRef<HTMLDivElement>(null);
 
   // Smooth scroll logic for the selector
   useEffect(() => {
@@ -133,32 +134,43 @@ const Portfolio: React.FC = () => {
         });
       }
     }
+    // Mobile centering
+    if (mobileScrollRef.current) {
+      const activeEl = mobileScrollRef.current.children[activeIndex] as HTMLElement;
+      if (activeEl) {
+        mobileScrollRef.current.scrollTo({
+          left: activeEl.offsetLeft - mobileScrollRef.current.offsetWidth / 2 + activeEl.offsetWidth / 2,
+          behavior: 'smooth'
+        });
+      }
+    }
   }, [activeIndex]);
 
   return (
-    <section id="portfolio" className="relative py-32 lg:py-48 accent-gradient-bg overflow-hidden">
+    <section id="portfolio" className="relative py-24 lg:py-48 accent-gradient-bg overflow-hidden">
       {/* Cinematic Background Grid Overlays */}
       <div className="absolute inset-0 opacity-[0.1] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)', backgroundSize: '100px 100px' }}></div>
       <div className="absolute -top-1/2 -left-1/4 w-full h-full bg-white/20 blur-[180px] rounded-full pointer-events-none animate-pulse-slow"></div>
 
       <div className="container relative z-10 mx-auto px-6">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
           
           {/* LEFT: THE COMMAND SELECTOR */}
           <div className="w-full lg:w-1/3 reveal">
-            <div className="mb-10">
-              <div className="flex items-center space-x-3 mb-4">
+            <div className="mb-8 lg:mb-10 text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start space-x-3 mb-4">
                 <div className="w-8 h-px bg-white"></div>
                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white">Industry Portfolio</span>
               </div>
               <h2 className="text-4xl lg:text-5xl font-black text-white tracking-tighter-custom leading-tight">
-                Market <br/><span className="bg-slate-900 px-4 py-1 inline-block -rotate-1 mt-2 shadow-2xl">Performance.</span>
+                Market <br className="hidden lg:block"/><span className="bg-slate-900 px-4 py-1 inline-block -rotate-1 mt-2 shadow-2xl">Performance.</span>
               </h2>
             </div>
 
+            {/* Desktop Vertical Selector */}
             <div 
               ref={scrollRef}
-              className="h-[450px] overflow-y-auto pr-4 space-y-2 scroll-hide bg-black/5 rounded-3xl p-2 backdrop-blur-sm"
+              className="hidden lg:block h-[450px] overflow-y-auto pr-4 space-y-2 scroll-hide bg-black/5 rounded-3xl p-2 backdrop-blur-sm"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {industryData.map((item, idx) => (
@@ -185,81 +197,102 @@ const Portfolio: React.FC = () => {
                 </button>
               ))}
             </div>
+
+            {/* Mobile/Tablet Horizontal Selector */}
+            <div 
+              ref={mobileScrollRef}
+              className="lg:hidden flex overflow-x-auto pb-6 space-x-3 scroll-hide"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {industryData.map((item, idx) => (
+                <button
+                  key={item.id}
+                  onClick={() => setActiveIndex(idx)}
+                  className={`flex-shrink-0 px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest transition-all duration-300 border ${
+                    activeIndex === idx 
+                      ? 'bg-white text-slate-900 shadow-xl border-transparent' 
+                      : 'bg-white/10 text-white border-white/20'
+                  }`}
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
             
-            <p className="mt-8 text-white/60 text-xs font-bold uppercase tracking-widest leading-relaxed">
+            <p className="hidden lg:block mt-8 text-white/60 text-xs font-bold uppercase tracking-widest leading-relaxed">
               *Scroll to explore all 14 sectors
             </p>
           </div>
 
           {/* RIGHT: THE IMPACT STAGE */}
-          <div className="w-full lg:w-2/3 h-full lg:min-h-[700px] flex items-center justify-center">
+          <div className="w-full lg:w-2/3 flex items-center justify-center">
             <div className="relative w-full max-w-2xl group">
-              {/* Dynamic Content Card - Using high-contrast white card against the gradient background */}
-              <div key={activeIndex} className="animate-[slideUp_0.6s_ease-out] bg-white rounded-[4rem] p-10 lg:p-16 shadow-[0_50px_100px_-30px_rgba(0,0,0,0.3)] relative overflow-hidden border border-white/40">
+              {/* Dynamic Content Card */}
+              <div key={activeIndex} className="animate-[slideUp_0.6s_ease-out] bg-white rounded-[2.5rem] lg:rounded-[4rem] p-8 lg:p-16 shadow-[0_50px_100px_-30px_rgba(0,0,0,0.3)] relative overflow-hidden border border-white/40">
                 
                 {/* Decorative Elements */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-lfcRed/5 rounded-bl-full"></div>
+                <div className="absolute top-0 right-0 w-24 h-24 lg:w-32 lg:h-32 bg-lfcRed/5 rounded-bl-full"></div>
                 
                 {/* Header Section */}
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-16">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 lg:gap-8 mb-10 lg:mb-16">
                   <div className="flex items-center space-x-4">
-                    <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center border border-slate-100 shadow-inner">
-                      <Factory className="text-lfcRed" size={32} />
+                    <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl bg-slate-50 flex items-center justify-center border border-slate-100 shadow-inner">
+                      <Factory className="text-lfcRed" size={24} />
                     </div>
                     <div>
-                      <div className="text-[10px] font-black text-lfcRed uppercase tracking-widest mb-1">Sector Analysis</div>
-                      <h3 className="text-3xl font-black text-slate-900 tracking-tighter-custom">{activeData.name}</h3>
+                      <div className="text-[9px] lg:text-[10px] font-black text-lfcRed uppercase tracking-widest mb-1">Sector Analysis</div>
+                      <h3 className="text-2xl lg:text-3xl font-black text-slate-900 tracking-tighter-custom">{activeData.name}</h3>
                     </div>
                   </div>
                   <div className="text-left md:text-right">
-                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">EBITDA Delta Realized</div>
-                    <div className="text-6xl font-black text-slate-900 tracking-tighter">{activeData.impact}</div>
+                    <div className="text-[9px] lg:text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">EBITDA Delta Realized</div>
+                    <div className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tighter">{activeData.impact}</div>
                   </div>
                 </div>
 
                 {/* Case Details */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-                  <div className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mb-10 lg:mb-16">
+                  <div className="space-y-3 lg:space-y-4">
                     <div className="flex items-center space-x-2 text-slate-400">
-                      <Gauge size={16} className="text-lfcOrange" />
-                      <span className="text-[10px] font-bold uppercase tracking-widest">The Challenge</span>
+                      <Gauge size={14} className="text-lfcOrange" />
+                      <span className="text-[9px] lg:text-[10px] font-bold uppercase tracking-widest">The Challenge</span>
                     </div>
-                    <p className="text-lg text-slate-500 font-medium leading-relaxed italic">
+                    <p className="text-base lg:text-lg text-slate-500 font-medium leading-relaxed italic">
                       "{activeData.challenge}"
                     </p>
                   </div>
-                  <div className="space-y-4">
+                  <div className="space-y-3 lg:space-y-4">
                     <div className="flex items-center space-x-2 text-slate-400">
-                      <TrendingUp size={16} className="text-lfcRed" />
-                      <span className="text-[10px] font-bold uppercase tracking-widest">Our Strategic Lever</span>
+                      <TrendingUp size={14} className="text-lfcRed" />
+                      <span className="text-[9px] lg:text-[10px] font-bold uppercase tracking-widest">Our Strategic Lever</span>
                     </div>
-                    <p className="text-lg text-slate-900 font-bold leading-relaxed">
+                    <p className="text-base lg:text-lg text-slate-900 font-bold leading-relaxed">
                       {activeData.solution}
                     </p>
                   </div>
                 </div>
 
                 {/* LinkedIn Call to Action */}
-                <div className="flex flex-col sm:flex-row items-center justify-between pt-10 border-t border-slate-50 gap-8">
+                <div className="flex flex-col sm:flex-row items-center justify-between pt-8 lg:pt-10 border-t border-slate-50 gap-6 lg:gap-8">
                   <div className="flex items-center space-x-4 text-slate-400">
-                    <ShieldCheck size={20} className="text-lfcRed" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest">Audit Verified Results</span>
+                    <ShieldCheck size={18} className="text-lfcRed" />
+                    <span className="text-[9px] lg:text-[10px] font-bold uppercase tracking-widest">Audit Verified Results</span>
                   </div>
                   <a 
                     href={activeData.linkedin} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="group/btn flex items-center space-x-4 bg-slate-900 text-white px-8 py-4 rounded-2xl font-black text-sm transition-all hover:scale-105 active:scale-95 shadow-xl shadow-slate-900/20"
+                    className="w-full sm:w-auto group/btn flex items-center justify-center space-x-4 bg-slate-900 text-white px-8 py-4 rounded-2xl font-black text-sm transition-all hover:scale-105 active:scale-95 shadow-xl shadow-slate-900/20"
                   >
                     <span>Read Full Case Study</span>
-                    <ExternalLink size={18} className="group-hover/btn:translate-x-1 transition-transform" />
+                    <ExternalLink size={16} className="group-hover/btn:translate-x-1 transition-transform" />
                   </a>
                 </div>
               </div>
 
-              {/* Background Stack Decor */}
-              <div className="absolute -z-10 -bottom-6 left-10 right-10 h-10 bg-black/10 rounded-[4rem] translate-y-2 blur-sm"></div>
-              <div className="absolute -z-20 -bottom-12 left-20 right-20 h-10 bg-black/5 rounded-[4rem] translate-y-4 blur-md"></div>
+              {/* Background Stack Decor - Simplified for mobile */}
+              <div className="absolute -z-10 -bottom-4 lg:-bottom-6 left-8 right-8 lg:left-10 lg:right-10 h-10 bg-black/10 rounded-[2.5rem] lg:rounded-[4rem] translate-y-2 blur-sm"></div>
+              <div className="hidden lg:block absolute -z-20 -bottom-12 left-20 right-20 h-10 bg-black/5 rounded-[4rem] translate-y-4 blur-md"></div>
             </div>
           </div>
 
