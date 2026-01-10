@@ -57,23 +57,23 @@ const industryData = [
     impact: "+31% Yield",
     challenge: "Molten metal loss & dross formation.",
     solution: "OEE precision & operator-logic training.",
-    linkedin: "https://www.linkedin.com/pulse/aluminium-yield-lfc"
+    linkedin: "https://www.linkedin.com/posts/levers-for-change_aluminum-production-turning-burn-loss-into-activity-7413927850442993665-181P?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAFhReEBKFeYM92u2tCMYeRw9x6k5AXhD00"
   },
   {
     id: "08",
-    name: "Converted Paper",
+    name: "Converted Paper Products",
     impact: "+22% EBITDA",
     challenge: "High set-up waste & roll changeover time.",
     solution: "SMED logic & throughput flow acceleration.",
-    linkedin: "https://www.linkedin.com/pulse/paper-transformation-lfc"
+    linkedin: "https://www.linkedin.com/posts/gangadharana03_converted-paper-products-from-600-to-1300-activity-7412831312048484352-PC1p?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAFhReEBKFeYM92u2tCMYeRw9x6k5AXhD00"
   },
   {
     id: "09",
-    name: "Cosmetic Care",
+    name: "Cosmetic & Personal Care",
     impact: "30% Labor Cut",
     challenge: "High manual handling in filling lines.",
     solution: "Manpower logic & ergonomic line redesign.",
-    linkedin: "https://www.linkedin.com/pulse/cosmetic-efficiency-lfc"
+    linkedin: "https://www.linkedin.com/posts/levers-for-change_cosmetics-personal-care-the-callage-transformation-activity-7414913962154090497-W8FC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAFhReEBKFeYM92u2tCMYeRw9x6k5AXhD00"
   },
   {
     id: "10",
@@ -81,23 +81,23 @@ const industryData = [
     impact: "2.0x Flow",
     challenge: "Assembly line clutter & WIP silos.",
     solution: "Cellular manufacturing & pull-system logic.",
-    linkedin: "https://www.linkedin.com/pulse/machinery-flow-lfc"
+    linkedin: "https://www.linkedin.com/pulse/industrial-machinery-last-mile-profit-revolution-levers-for-change-cjv5c"
   },
   {
     id: "11",
-    name: "Dairy",
+    name: "Dairy & Alternatives",
     impact: "+15% Recovery",
     challenge: "Product giveaway & CIP downtime.",
     solution: "Yield tracking & digital twin transparency.",
-    linkedin: "https://www.linkedin.com/pulse/dairy-optimization-lfc"
+    linkedin: "https://www.linkedin.com/posts/levers-for-change_cracking-the-last-mile-how-a-dairy-brand-activity-7414918661309861888-HECb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAFhReEBKFeYM92u2tCMYeRw9x6k5AXhD00"
   },
   {
     id: "12",
-    name: "Hygiene",
+    name: "Hygiene & Toiletries",
     impact: "+40% OEE",
     challenge: "High-speed line synchronization gaps.",
     solution: "Focused OEE & micro-stoppage elimination.",
-    linkedin: "https://www.linkedin.com/pulse/hygiene-impact-lfc"
+    linkedin: "https://www.linkedin.com/pulse/hygiene-toiletries-hidden-cost-small-stoppage-levers-for-change-yid1c"
   },
   {
     id: "13",
@@ -105,15 +105,15 @@ const industryData = [
     impact: "+26% EBITDA",
     challenge: "High casting rejection rates.",
     solution: "Root-cause OEE logic & process stability.",
-    linkedin: "https://www.linkedin.com/pulse/foundry-transformation-lfc"
+    linkedin: "https://www.linkedin.com/pulse/metal-foundries-heat-to-profit-transformation-levers-for-change-ywnic"
   },
   {
     id: "14",
-    name: "Packaged Foods",
+    name: "Packaged Foods & Ingredients",
     impact: "+33% Capacity",
     challenge: "Seasonality & erratic floor demand.",
     solution: "Sales alignment & flexible labor logic.",
-    linkedin: "https://www.linkedin.com/pulse/packaged-foods-delta-lfc"
+    linkedin: "https://www.linkedin.com/posts/levers-for-change_packaged-foods-ingredients-the-yield-activity-7415271239092449280-dvUL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAFhReEBKFeYM92u2tCMYeRw9x6k5AXhD00"
   }
 ];
 
