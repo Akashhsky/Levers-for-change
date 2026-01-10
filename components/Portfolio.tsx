@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight, ExternalLink, ShieldCheck, Factory, Gauge, TrendingUp, Layers, ChevronRight } from 'lucide-react';
 
@@ -225,7 +224,7 @@ const Portfolio: React.FC = () => {
           </div>
 
           {/* RIGHT: THE IMPACT STAGE */}
-          <div className="w-full lg:w-2/3 flex items-center justify-center">
+          <div className="w-full lg:w-2/3 flex lg:items-start justify-center lg:pt-36">
             <div className="relative w-full max-w-2xl group">
               {/* Dynamic Content Card */}
               <div key={activeIndex} className="animate-[slideUp_0.6s_ease-out] bg-white rounded-[2.5rem] lg:rounded-[4rem] p-8 lg:p-16 shadow-[0_50px_100px_-30px_rgba(0,0,0,0.3)] relative overflow-hidden border border-white/40">
