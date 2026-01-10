@@ -25,7 +25,7 @@ const industryData = [
     impact: "+28% Margin",
     challenge: "Inaccurate cutting yield & log-mix logic.",
     solution: "Inventory flow redesign & sales alignment delta.",
-    linkedin: "https://www.linkedin.com/pulse/lumber-wood-efficiency-lfc"
+    linkedin: "https://www.linkedin.com/posts/levers-for-change_lumber-wood-doubling-availability-through-activity-7414652212624375808-AU42?utm_source=share&utm_medium=member_desktop&rcm=ACoAABBpg38B7aBIb3-fiqyzQXdAq6Whhnqq8lc"
   },
   {
     id: "04",
@@ -33,7 +33,7 @@ const industryData = [
     impact: "+35% Throughput",
     challenge: "Bottlenecks in high-precision casting.",
     solution: "Flow balancing & WIP reduction.",
-    linkedin: "https://www.linkedin.com/pulse/auto-components-flow-lfc"
+    linkedin: "https://www.linkedin.com/posts/levers-for-change_auto-components-the-double-engine-strategy-activity-7413922494237085697-xWUy?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAFhReEBKFeYM92u2tCMYeRw9x6k5AXhD00"
   },
   {
     id: "05",
@@ -41,7 +41,7 @@ const industryData = [
     impact: "18% Energy Cut",
     challenge: "Thermal loss & idle forge time.",
     solution: "Precision scheduling & maintenance syncing.",
-    linkedin: "https://www.linkedin.com/pulse/iron-steel-impact-lfc"
+    linkedin: "https://www.linkedin.com/pulse/iron-steel-manufacturing-heat-to-profit-transformation-g6uoc"
   },
   {
     id: "06",
@@ -49,7 +49,7 @@ const industryData = [
     impact: "+24% Capacity",
     challenge: "Batch processing lag & reactor idle time.",
     solution: "Parallel processing & cycle-time compression.",
-    linkedin: "https://www.linkedin.com/pulse/chemicals-optimization-lfc"
+    linkedin: "https://www.linkedin.com/pulse/specialty-chemicals-hidden-plant-discovery-levers-for-change-1tc5c"
   },
   {
     id: "07",
