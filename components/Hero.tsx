@@ -1,7 +1,14 @@
+
 import React from 'react';
 import { BarChart3, Activity, Target, Zap } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  const whatsappUrl = "https://wa.me/916380869731?text=Hi%20Levers%20For%20Change%2C%20I'm%20interested%20in%20a%20zero-fee%20EBITDA%20growth%20assessment%20for%20my%20manufacturing%20business.%20Can%20we%20discuss%20the%20next%20steps%3F";
+
+  const handleCTA = () => {
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section className="relative pt-44 pb-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -25,7 +32,7 @@ const Hero: React.FC = () => {
           </p>
           
           <button 
-            onClick={() => document.getElementById('cta-section')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={handleCTA}
             className="accent-gradient-bg text-white px-10 py-5 rounded-2xl text-lg font-black shadow-2xl shadow-lfcRed/20 hover:scale-105 active:scale-95 transition-all"
           >
             Schedule an Assessment
@@ -53,7 +60,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Background Card: OEE Precision - Now using Red/Orange Highlight */}
+          {/* Background Card: OEE Precision */}
           <div className="absolute top-44 -left-10 w-[380px] spatial-card rounded-[3rem] p-10 z-20 shadow-xl opacity-90 delay-150" style={{ animation: 'float 6s ease-in-out infinite -2s' }}>
             <div className="flex items-center space-x-4 mb-8">
               <div className="w-10 h-10 bg-lfcOrange/10 rounded-xl flex items-center justify-center shadow-inner">

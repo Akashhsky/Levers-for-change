@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import ClientLogos from './components/ClientLogos';
 import Levers from './components/Levers';
 import Portfolio from './components/Portfolio';
 import CTASection from './components/CTASection';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
       <Navbar />
       <main>
         <Hero />
+        <ClientLogos />
         <Levers />
         <Portfolio />
         <CTASection />

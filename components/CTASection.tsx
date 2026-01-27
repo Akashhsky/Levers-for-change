@@ -3,6 +3,12 @@ import React from 'react';
 import { Calendar, ShieldCheck } from 'lucide-react';
 
 const CTASection: React.FC = () => {
+  const whatsappUrl = "https://wa.me/916380869731?text=Hi%20Levers%20For%20Change%2C%20I'm%20interested%20in%20a%20zero-fee%20EBITDA%20growth%20assessment%20for%20my%20manufacturing%20business.%20Can%20we%20discuss%20the%20next%20steps%3F";
+
+  const handleCTA = () => {
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section id="cta-section" className="py-24 lg:py-32">
       <div className="container mx-auto px-6">
@@ -21,7 +27,7 @@ const CTASection: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 mb-4">
               <button 
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                onClick={handleCTA}
                 className="bg-white text-lfcBlue hover:bg-slate-50 px-12 py-6 rounded-[2rem] font-black text-xl shadow-2xl transition-all hover:scale-105 active:scale-95 group"
               >
                 Schedule an Assessment

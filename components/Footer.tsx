@@ -17,8 +17,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20">
           <div className="md:col-span-1">
-            <div className="flex items-center space-x-2 mb-8">
-              <div className="w-8 h-8 bg-lfcBlue rounded-lg flex items-center justify-center font-display font-bold text-lg text-white">L</div>
+            <div className="flex items-center mb-8">
               <span className="font-display font-bold text-lg tracking-tight text-slate-900">
                 LEVERS <span className="text-lfcRed">FOR CHANGE</span>
               </span>
