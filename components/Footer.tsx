@@ -20,9 +20,11 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20">
           <div className="md:col-span-1">
             <div className="flex items-center mb-8">
-              <span className="font-display font-bold text-lg tracking-tight text-slate-900">
-                LEVERS <span className="text-lfcRed">FOR CHANGE</span>
-              </span>
+              <img 
+                src="/assets/Logo.png" 
+                alt="Levers for Change" 
+                className="h-12"
+              />
             </div>
             <p className="text-slate-500 text-sm leading-relaxed mb-10 max-w-xs">
               Industrial transformation consultants specializing in EBITDA growth through precision operational engineering.

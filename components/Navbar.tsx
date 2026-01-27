@@ -44,11 +44,13 @@ const Navbar: React.FC = () => {
       >
         {/* Logo Section */}
         <a href="#" onClick={scrollToTop} className="flex items-center group cursor-pointer shrink-0">
-          <span className={`font-black tracking-tighter text-slate-900 transition-all duration-500 ${
-            scrolled ? 'text-sm' : 'text-lg'
-          }`}>
-            LEVERS <span className="text-lfcRed">FOR CHANGE</span>
-          </span>
+          <img 
+            src="/assets/Logo.png" 
+            alt="Levers for Change" 
+            className={`transition-all duration-500 ${
+              scrolled ? 'h-12' : 'h-14'
+            }`}
+          />
         </a>
 
         {/* Desktop Navigation */}
