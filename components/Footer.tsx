@@ -3,12 +3,14 @@ import React from 'react';
 import { Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 const partners = [
-  { name: "OmPrakash", url: "https://www.linkedin.com/in/omprakash-ns/" },
-  { name: "Gangadharan", url: "https://www.linkedin.com/in/gangadharana03/" },
-  { name: "Rawat", url: "https://www.linkedin.com/in/rawat-ram-godara-47a681137/" },
+  { name: "Omprakash N S", url: "https://www.linkedin.com/in/omprakash-ns/" },
+  { name: "Gangadharan A", url: "https://www.linkedin.com/in/gangadharana03/" },
+  { name: "Subhabrata Nath Sharma", url: "https://www.linkedin.com/in/subhabrata-sharma/" },
   { name: "Ankur Kumar", url: "https://www.linkedin.com/in/ankurkumar5/" },
-  { name: "Subhabrata", url: "https://www.linkedin.com/in/subhabrata-sharma/" },
-  { name: "Ankur jain", url: "https://www.linkedin.com/in/ankur-jain-1aa5ab61/" }
+  { name: "Ankur Jain", url: "https://www.linkedin.com/in/ankur-jain-1aa5ab61/" },
+  { name: "Haren Saga", url: "https://www.linkedin.com/in/haren-saga-216119188/" },
+  { name: "Rawat Ram Godara", url: "https://www.linkedin.com/in/rawat-ram-godara-47a681137/" },
+  { name: "Pritesh Khare", url: "https://www.linkedin.com/in/priteshkhare/" }
 ];
 
 const Footer: React.FC = () => {
