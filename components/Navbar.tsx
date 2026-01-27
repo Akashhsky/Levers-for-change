@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
             onClick={(e) => handleNavClick(e, 'levers')}
             className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 hover:text-lfcBlue transition-colors"
           >
-            Methodology
+            Areas
           </a>
           <a 
             href="#portfolio" 

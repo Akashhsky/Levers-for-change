@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight, ExternalLink, ShieldCheck, Factory, Gauge, TrendingUp, Layers, ChevronRight } from 'lucide-react';
 
@@ -162,7 +163,7 @@ const Portfolio: React.FC = () => {
                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white">Industry Portfolio</span>
               </div>
               <h2 className="text-4xl lg:text-5xl font-black text-white tracking-tighter-custom leading-tight">
-                Market <br className="hidden lg:block"/><span className="bg-slate-900 px-4 py-1 inline-block -rotate-1 mt-2 shadow-2xl">Performance.</span>
+                Results <br className="hidden lg:block"/><span className="bg-slate-900 px-4 py-1 inline-block -rotate-1 mt-2 shadow-2xl">Delivered.</span>
               </h2>
             </div>
 

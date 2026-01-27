@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BarChart3, Activity, Target, Zap } from 'lucide-react';
 
@@ -11,7 +10,7 @@ const Hero: React.FC = () => {
         <div className="relative z-10">
           <div className="inline-flex items-center space-x-2 bg-white/60 border border-white px-4 py-2 rounded-full mb-10 shadow-sm">
             <div className="w-2 h-2 bg-lfcRed rounded-full animate-pulse"></div>
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Zero-Fee Assessment Available</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Start with Zero fee assessment</span>
           </div>
           
           <h1 className="text-7xl lg:text-[100px] font-extrabold leading-[0.9] text-slate-900 mb-10 tracking-tighter-custom">
@@ -22,12 +21,14 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-lg text-slate-400 leading-relaxed mb-12 max-w-md font-medium">
-            Transform operational efficiency through high-precision manufacturing levers. 
-            No CAPEX. Just pure industrial intelligence.
+            No CAPEX. Transform through productivity levers.
           </p>
           
-          <button className="accent-gradient-bg text-white px-10 py-5 rounded-2xl text-lg font-black shadow-2xl shadow-lfcRed/20 hover:scale-105 active:scale-95 transition-all">
-            Claim Your Assessment
+          <button 
+            onClick={() => document.getElementById('cta-section')?.scrollIntoView({ behavior: 'smooth' })}
+            className="accent-gradient-bg text-white px-10 py-5 rounded-2xl text-lg font-black shadow-2xl shadow-lfcRed/20 hover:scale-105 active:scale-95 transition-all"
+          >
+            Schedule an Assessment
           </button>
         </div>
 

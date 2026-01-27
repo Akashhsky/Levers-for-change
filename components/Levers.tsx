@@ -6,39 +6,39 @@ const leversData = [
   {
     id: '01',
     icon: Target,
-    title: "Focused OEE Optimization",
-    description: "Eliminating micro-stoppages and synchronization lags. We push your existing hardware to its theoretical limit without capital expenditure.",
-    result: "+22% Capacity",
+    title: "Focused OEE transformation",
+    description: "Maximizing asset utilization through high-precision micro-stoppage elimination and asset synchronization. We unlock hidden plant capacity by pushing existing hardware to its true theoretical limit.",
+    result: "+5-40% Capacity",
     detail: "Statistical process control & bottleneck mapping."
   },
   {
     id: '02',
     icon: Users,
-    title: "Labor Logic Dynamics",
-    description: "Scientific ergonomic task-mapping. We re-engineer shift handovers and interval activities to recapture lost production minutes.",
-    result: "-30% Idle Time",
-    detail: "Interval studies & motion-economy audits."
+    title: "Cost optimization",
+    description: "Targeting systemic waste through precision manpower optimization, logistics streamlining, and conversion efficiency. We drive down the cost per unit by re-engineering every touchpoint of your production chain.",
+    result: "3-15% Cost Per Unit",
+    detail: "Manpower, logistics & conversion audits."
   },
   {
     id: '03',
     icon: Factory,
-    title: "Manufacturing Throughput",
-    description: "End-to-end floor flow redesign. We synchronize Work-In-Progress (WIP) to actual demand pulses for rapid inventory turnover.",
-    result: "2.4x Speedup",
-    detail: "Takt-time balancing & pull-system logic."
+    title: "Commercial Excellence",
+    description: "Driving bottom-line impact by reducing procurement cost and securing high value contracts. We architect your commercial framework to eliminate margin leakage and maximize sourcing efficiency.",
+    result: "2-12% Cost Reduction",
+    detail: "Strategic sourcing & contract optimization."
   },
   {
     id: '04',
     icon: TrendingUp,
-    title: "Sales Delta Alignment",
-    description: "Matching market demand profiles to actual floor capacity. We optimize your product mix for maximum margin contribution per hour.",
-    result: "+18% Margin",
-    detail: "Contribution-margin sequencing."
+    title: "Sales productivity",
+    description: "Unlocking latent top-line potential by synchronizing sales velocity with manufacturing rhythm. We scale your revenue capture without increasing fixed costs.",
+    result: "0.5x-3x Growth",
+    detail: "Revenue-velocity & mix-ratio mapping."
   },
   {
     id: '05',
     icon: Cpu,
-    title: "Digital Twin Enablement",
+    title: "Digital Enablement",
     description: "Real-time floor-to-top data synchronization using your existing PLC infrastructure. Digital transparency that drives decision speed.",
     result: "100% Visibility",
     detail: "IIoT edge-integration & live dashboards."
@@ -81,10 +81,10 @@ const Levers: React.FC = () => {
           <div className="max-w-xl">
             <div className="flex items-center space-x-3 mb-4 lg:mb-6">
               <div className="w-8 lg:w-10 h-[2px] bg-lfcRed"></div>
-              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-lfcRed">The Methodology</span>
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-lfcRed">Focused area</span>
             </div>
             <h3 className="text-4xl lg:text-6xl font-extrabold tracking-tighter-custom text-slate-900 leading-none">
-              Precision <span className="ebitda-gradient">Levers.</span>
+              Productivity <span className="ebitda-gradient">levers.</span>
             </h3>
           </div>
           <p className="mt-4 lg:mt-0 text-slate-400 font-medium max-w-xs text-xs lg:text-sm leading-relaxed">
@@ -182,7 +182,7 @@ const Levers: React.FC = () => {
                 } else if (isNext) {
                   transform = isMobile
                     ? "translateX(30%) scale(0.9) opacity-0"
-                    : "translateX(20%) translateY(10%) rotateY(5deg) scale(0.9) opacity-20 blur-md";
+                    : "translateX(20%) translateY(10%) rotateY(5deg) scale(0.9) opacity(20) blur-md";
                   zIndex = 10;
                 }
 
