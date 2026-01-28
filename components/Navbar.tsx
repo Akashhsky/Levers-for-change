@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
+import Logo from '../assets/Logo.png';
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -45,7 +46,7 @@ const Navbar: React.FC = () => {
         {/* Logo Section */}
         <a href="#" onClick={scrollToTop} className="flex items-center group cursor-pointer shrink-0">
           <img 
-            src="/assets/Logo.png" 
+            src={Logo} 
             alt="Levers for Change" 
             className={`transition-all duration-500 ${
               scrolled ? 'h-12' : 'h-14'

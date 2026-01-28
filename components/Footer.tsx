@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import Logo from '../assets/Logo.png';
 
 const partners = [
   { name: "Omprakash N S", url: "https://www.linkedin.com/in/omprakash-ns/" },
@@ -21,7 +22,7 @@ const Footer: React.FC = () => {
           <div className="md:col-span-1">
             <div className="flex items-center mb-8">
               <img 
-                src="/assets/Logo.png" 
+                src={Logo} 
                 alt="Levers for Change" 
                 className="h-12"
               />
