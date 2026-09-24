@@ -19,7 +19,7 @@ html = io.open(TEMPLATE, encoding="utf-8").read()
 html = html.replace("__PREMIUM_CSS__", io.open(_p("src", "editorial.css"), encoding="utf-8").read() + "\n" + io.open(_p("src", "atelier.css"), encoding="utf-8").read() + "\n" + io.open(_p("src", "colour-v4.css"), encoding="utf-8").read() + "\n" + io.open(_p("src", "home-v5.css"), encoding="utf-8").read() + "\n" + io.open(_p("src", "home-v6.css"), encoding="utf-8").read())
 html = html.replace("__HOME_JS__", io.open(_p("src", "connectfacts-ai-v27.js"), encoding="utf-8").read() + "\n" +  io.open(_p("src", "home-v4.js"), encoding="utf-8").read().split("  PAGES['']")[0] + "\n" + io.open(_p("src", "home-v6.js"), encoding="utf-8").read() + "\n" + io.open(_p("src", "services-v23.js"), encoding="utf-8").read())
 html = html.replace("__INTERACTIONS_JS__", io.open(_p("src", "interactions-v4.js"), encoding="utf-8").read() + "\n" + io.open(_p("src", "interactions-v5-extra.js"), encoding="utf-8").read() + "\n" + io.open(_p("src", "motion-v6.js"), encoding="utf-8").read())
-html = html.replace("__CLIENT_MARKS__", jsblob(json.load(open(_p("data", "client-logos-v5.json"), encoding="utf-8")))).replace("__LEADERS__", jsblob([{k:l[k] for k in ("slug","name","role","linkedin") if k in l} for l in json.load(open(_p("data", "leaders.json"), encoding="utf-8"))]))
+html = html.replace("__CLIENT_MARKS__", jsblob(json.load(open(_p("data", "about-client-logos.json"), encoding="utf-8")))).replace("__LEADERS__", jsblob([{k:l[k] for k in ("slug","name","role","linkedin") if k in l} for l in json.load(open(_p("data", "leaders.json"), encoding="utf-8"))]))
 for key in ("__CASES__", "__LOGOS__", "__LFC_LOGO__", "__CF_SVG__"):
     assert html.count(key) >= 1, "placeholder missing: " + key
 

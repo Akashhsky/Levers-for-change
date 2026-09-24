@@ -1,11 +1,9 @@
-// The logo strip is controllable and pauses automatically for reading.
+// Show every client on demand; pause the marquee while visitors browse.
 function wireLogoStrip(){
-  var section=main.querySelector('.clients5'),button=main.querySelector('#logoPause');
-  if(!section||!button)return;
-  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)'),playing=true;
-  function sync(){section.classList.toggle('is-paused',!playing);section.classList.toggle('is-playing',playing);button.hidden=false;button.textContent=playing?'Pause logos':'Play logos';button.setAttribute('aria-pressed',String(!playing));}
-  function toggle(){playing=!playing;sync();}
-  button.addEventListener('click',toggle);reduced.addEventListener('change',sync);sync();
+  var section=main.querySelector('.clients5'),button=main.querySelector('#clients28Toggle'),gallery=main.querySelector('#clients28Gallery');
+  if(!section||!button||!gallery)return;
+  function toggle(){var expanded=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(expanded));button.textContent=expanded?'Close clients':'Our clients';gallery.hidden=!expanded;section.classList.toggle('is-paused',expanded);}
+  button.addEventListener('click',toggle);
   var previousDispose=disposeExperience;
-  disposeExperience=function(){button.removeEventListener('click',toggle);reduced.removeEventListener('change',sync);previousDispose();};
+  disposeExperience=function(){button.removeEventListener('click',toggle);previousDispose();};
 }
