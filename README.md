@@ -1,20 +1,16 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Levers for Change — V27
 
-# Run and deploy your AI Studio app
+The current approved website is in `site/`. Vercel serves that folder using `vercel.json`, without an install or build step.
 
-This contains everything you need to run your app locally.
+## Edit and preview
 
-View your app in AI Studio: https://ai.studio/apps/drive/1ozq2Oqz-baduC82gVU7XRk0zsOB5AuXn
+- Editable templates and styles: `src/`
+- Public website data: `data/`
+- Rebuild after editing: `python build/5_build_site.py`
+- Preview: `python -m http.server 4173 --directory site`
 
-## Run Locally
+The checked-in site includes the updated ConnectFacts AI content and plain AI lettering, client logos, leadership and Saudi sections. Routes use URL hashes.
 
-**Prerequisites:**  Node.js
+The earlier React prototype remains in the root and `components/` for reference; it is not the Vercel output.
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Contact forms open the visitor's email application. No backend or API keys are required.

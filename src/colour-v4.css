@@ -1,0 +1,35 @@
+/* A deliberate rhythm of LFC blue, warm sand, clear white and deep ink. */
+:root{--bg:#fafaf7;--bg-warm:#eae1d5;--blue-tint:#deeaef;--fg-3:#687780;--rule:#d4dcdf}
+.hero4-band{background:#dce7ec;border-bottom:1px solid #c5d4dc}
+.hero3 h1{color:#173d55}.hero3 h1>span{color:#416f87}.hero3-description{color:#435c69}
+.hero3-note{border-color:#b9ccd6}.hero3-note>p,.hero3-index{color:#506b78}
+.hero3-image{background:#7693a0;box-shadow:0 18px 45px #173d5514}
+.hero3-image-label{top:auto;bottom:24px;left:22px;right:22px;color:#fff;text-shadow:none;background:#163b51e8;padding:11px 13px;border-radius:5px;line-height:1.7}
+.hero3-image>img{object-position:51% center}.hero3-inset{border-color:#cad6dc;background:#f8fafb}
+.brand-strip{padding-top:34px;padding-bottom:38px}.brand-strip img{opacity:.8}
+.intro3 h2 span,.people3 h2>span{color:#47728a}
+.capabilities-section{padding-bottom:65px}.cap-panel{background:#e7ded2;border-color:#dfd2c1}.cap-copy>p:not(.eyebrow){color:#53606a}.cap-tabs{background:#e4edf0;border-color:#cfdee4}.cap-tabs button>span{color:#617783}
+.impact4-band{background:#163e55;color:#fff;padding:60px 0;margin-bottom:65px}
+.impact4-band .work3{padding:0}.impact4-band h2,.impact4-band .work3-card,.impact4-band .work3-card>h3{color:#f7fafb}
+.impact4-band .eyebrow,.impact4-band .work3-card>strong{color:#b9d5e1}.impact4-band .text-link{color:#edf7fb}
+.impact4-band .work3-card>p:last-child,.impact4-band .portfolio-note{color:#c1d1d8}.impact4-band .portfolio-note{border-color:#3d6073}
+.work3-photo{border:1px solid #577280}.industry3{padding-bottom:65px}
+.digital3{background:#d4e4eb;border-color:#bfd3de}.digital3-tags>span{color:#355c72;border-color:#a8c2cf;background:#ffffff40}
+.people4-band{background:#eae1d5;padding:65px 0;margin-bottom:65px}.people4-band .people3{padding-bottom:0}.people3-copy>p:not(.eyebrow){color:#52606a}.people3-image>p{background:#f8f5eef2}
+.journey3-card:nth-child(2){background:#e6eef1;border-color:#cddde4}.journey3-card:nth-child(3){background:#f0e8dd;border-color:#ddd0bf}
+.resource3{background:#dde6dc;border-color:#cbd7ca}.resource3 h2{color:#304e42}.resource3 .eyebrow{color:#536c5b}
+.closing4-band{background:#dce7ec}.closing3{border-top:0}.closing3 h2>span{color:#416f87}
+.foot{background:#123247;color:#dae5eb;border-top:0}.foot-state,.assist h2,.foot-links a{color:#f5f8fa}.assist p{color:#bed0da}.foot-bottom{color:#a6becb;border-color:#35566b}.foot .text-link,.foot a{color:#d5e7ef}.foot-bottom img{background:#f8fafb;border-radius:5px;padding:8px;height:43px}
+/* Inner pages get the same colour hierarchy, especially the impact library. */
+main[data-page='our-work']{background:#e8eef1}main[data-page='our-work']>.section:first-child{background:#d7e4eb;border-bottom:1px solid #c3d5df}
+main[data-page='our-work'] .head .eyebrow{color:#47718a}main[data-page='our-work'] .filters{background:#f9fbfc;border-color:#c6d6de;box-shadow:0 10px 30px #28465a06}
+.case{border-color:#d0dde3;box-shadow:0 8px 25px #1c405407}.case:hover{border-color:#829fae}.case-image{height:205px;background:#bacbd3}
+.case .tag{background:#dfebf1;color:#355c72}.case .tag.tag-sales{background:#eee2cd;color:#785b33}.case .tag.tag-workforce{background:#e0e9de;color:#426046}
+.band-warm{background:#eae1d5}.band-tint{background:#dce8ee}.detail-aside{background:#d8e6ed;border-color:#bfd3de}
+.diagnostic-band{background:#214c65;border-color:#214c65;color:#eff7fb}.diagnostic-band h2{color:#f6fafc}.diagnostic-band .body,.diagnostic-band .eyebrow,.diagnostic-band .form-note,.diagnostic-band .sub-form label{color:#c7dce6}.diagnostic-band .btn-white{background:#f2e7d5;color:#25465b;border-color:#f2e7d5}
+.contact-grid .lcard{background:#e5edf0}.step:nth-child(2){background:#e5edf1}.step:nth-child(3){background:#eee5d8}
+@media(max-width:560px){.impact4-band{padding:35px 0;margin-bottom:36px}.people4-band{padding:34px 0;margin-bottom:38px}.hero3-image-label{font-size:6px;bottom:16px;left:12px;right:12px;padding:8px}.brand-strip{padding-block:25px}.industry3{padding-bottom:40px}.case-image{height:190px}}
+
+.foot .btn{background:#e8d9c2;border-color:#e8d9c2;color:#173d55}.foot .btn:hover{background:#f4eadc;border-color:#f4eadc}
+.hero3-image-label{top:16px;bottom:auto}
+.work3-photo>span{color:#163e55}
